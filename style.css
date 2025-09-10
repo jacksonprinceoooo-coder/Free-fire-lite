@@ -1,0 +1,172 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Login Screen */
+#loginScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 15px;
+  background: linear-gradient(to bottom, #2196F3, #0D47A1);
+}
+#loginScreen input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+}
+#loginScreen button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFC107;
+  font-weight: bold;
+  cursor: pointer;
+}
+#loginScreen button:hover { background-color: #FFB300; }
+#loginMsg { color: yellow; font-weight: bold; }
+
+/* Game Area */
+#gameArea {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#4CAF50,#2E7D32);
+  overflow:hidden;
+}
+
+/* Player */
+#player {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: blue;
+  border-radius: 8px;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 10px #2196F3;
+}
+
+/* Enemies */
+.enemy {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  box-shadow: 0 0 8px red;
+}
+
+/* Bullet */
+.bullet {
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 5px yellow;
+}
+
+/* Health Kit */
+.healthKit {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: green;
+  border-radius: 5px;
+  box-shadow: 0 0 5px lime;
+  animation: bounce 1s infinite alternate;
+}
+
+/* Loot Crate */
+.lootCrate {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: orange;
+  border-radius: 5px;
+  box-shadow: 0 0 8px gold;
+  animation: bounce 1.2s infinite alternate;
+}
+
+/* Obstacle */
+.obstacle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #555;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #000;
+}
+
+/* HUD */
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#healthContainer {
+  width: 200px;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#healthBar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, green, red);
+  transition: width 0.3s;
+}
+
+#info {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Safe Zone */
+#safeZone {
+  position: absolute;
+  border: 3px dashed white;
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 1s, height 1s;
+}
+
+/* Game Over */
+#gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+  display: none;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Animations */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
