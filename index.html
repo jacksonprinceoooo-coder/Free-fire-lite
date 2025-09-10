@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Fire Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="loginScreen">
+    <h1>Free Fire Lite</h1>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg"></p>
+  </div>
+
+  <!-- Game Area -->
+  <div id="gameArea" style="display:none;">
+    <div id="player"></div>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="healthContainer">
+        <div id="healthBar"></div>
+      </div>
+      <div id="info">
+        <span id="score">Score: 0</span>
+        <span id="gun">Gun: Pistol</span>
+        <span id="ammo">Ammo: 10</span>
+      </div>
+    </div>
+
+    <!-- Safe Zone -->
+    <div id="safeZone"></div>
+
+    <!-- Game Over -->
+    <div id="gameOver">💀 GAME OVER 💀</div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="shootSound" src="shoot.mp3"></audio>
+  <audio id="hitSound" src="hit.mp3"></audio>
+  <audio id="lootSound" src="loot.mp3"></audio>
+  <audio id="healSound" src="heal.mp3"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
